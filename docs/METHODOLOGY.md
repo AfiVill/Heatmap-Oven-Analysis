@@ -22,6 +22,5 @@ A recurring risk in ML systems that are already in use: an improvement to the mo
 - The channel is **optional at the data level** — pair objects either carry it or they don't, and the training/inference code paths detect which case they're in rather than assuming one.
 - The channel count that a checkpoint expects is **read from the checkpoint's own saved weights**, not hardcoded — so older and newer checkpoints load correctly side by side without a version flag.
 - Combinations that would silently produce an unusable checkpoint (for example, pairing this feature with an architecture whose input layer can't accommodate it) are **rejected at training time with a specific error**, rather than allowed to train "successfully" into a model with no valid inference path.
-- The feature shipped with a **matching adversarial review pass** before being wired into the interactive application, specifically to catch the failure modes that don't show up in a first read-through: an edge case in a normalization function, a check that used the wrong list slice, a channel-count comparison that was accidentally too loose.
 
 None of this is exotic — it's the ordinary discipline of not trading a working system's stability for a new feature's convenience.
