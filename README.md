@@ -2,15 +2,15 @@
 
 **Spatial thermal modeling and deep-learning browning prediction for industrial convection ovens.**
 
-This repository is a portfolio overview of an applied ML/DL engineering project: predicting how baked-good color/browning develops across a tray inside an industrial oven cavity, using a sparse grid of thermocouple and surface-contact sensors as the only input — without needing a completed bake to know the outcome.
+This repository is a portfolio overview of an applied ML/DL engineering project: predicting how baked-good color/browning develops across a tray inside an industrial oven cavity.
 
-> **About this repository.** This is a documentation-only overview, not the production codebase. The underlying source code, sensor datasets, and trained model weights were developed as part of proprietary industrial R&D and are intentionally not published here. What follows describes the problem, the architecture, and the engineering methodology in full — with no proprietary implementation details, data, or business metrics included.
+> **About this repository.** This is a documentation-only overview, not the production codebase. The underlying source code, sensor datasets, and trained model weights were developed as part of proprietary R&D and are intentionally not published here. What follows describes the problem, the architecture, and the engineering methodology in full — with no proprietary implementation details, data, or business metrics included.
 
 ---
 
 ## The Problem
 
-Industrial ovens instrument trays with a sparse grid of thermocouples (air temperature) and surface-contact sensors, logged continuously through a bake cycle. The question this project answers:
+The question this project answers:
 
 > Given only that sparse, evolving sensor grid, can we predict the resulting spatial browning pattern across the tray — accurately enough to be useful during process development, before ever finishing a physical bake?
 
